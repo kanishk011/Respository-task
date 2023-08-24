@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table Task</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css"
+        integrity="sha384-b6lVK+yci+bfDmaY1u0zE8YYJt0TZxLEAFyYSLHId4xoVvsrQu3INevFKo+Xir8e" crossorigin="anonymous">
+    <style>
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+
+<body data-bs-spy="scroll" data-bs-target="#list-example">
+
+    <div class="container my-5">
+        <table class="table table-bordered" id="itemTable">
+            <thead>
+                <div id="list-example">
+                    <tr class="text-center">
+                        <th rowspan="2"></th>
+                        <th rowspan="2"><i class="bi bi-app"></i></th>
+                        <th rowspan="2">Item ID</th>
+                        <th colspan="3">Item Details</th>
+                    </tr>
+                    <tr>
+                        <th colspan="1" rowspan="1">Item Name</th>
+                        <th colspan="1" rowspan="1">Item price</th>
+                        <th colspan="1" rowspan="1">Item operate</th>
+                    </tr>
+                </div>
+            </thead>
+            <tbody>
+                <div data-bs-spy="scroll" data-bs-target="#list-example" data-bs-smooth-scroll="true"
+                    class="scrollspy-example" tabindex="0">
+                    <tr class="text-center toggle-row" >
+                        <td><button class="btn toggle-button">+</button></td>
+                        <td><i class="bi bi-app"></i></td>
+                        <td>0</td>
+                        <td>Item 0</td>
+                        <td>$0</td>
+                        <td><button class="btn" data-bs-toggle="modal" data-bs-target="#exampleModal"><i
+                                    class="bi bi-heart-fill text-primary"></i></button>
+                            <button class="btn deleteBtn"><i class="bi bi-trash-fill text-primary"></i></button>
+                        </td>
+                    </tr>
+                    <tr class="hidden-row hidden">
+                        <td colspan="6">
+                            <ul class="list-unstyled">
+                                <li> ID : 0
+                                </li>
+                                <li> Name : Item 0
+                                </li>
+                                <li> Price :$0
+                                </li>
+                                <li> state : False</li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr class="text-center toggle-row" >
+                        <td><button class="btn toggle-button">+</button></td>
+                        <td><i class="bi bi-app"></i></td>
+                        <td>1</td>
+                        <td>Item 1</td>
+                        <td>$1</td>
+                        <td><button class="btn" data-bs-toggle="modal" data-bs-target="#exampleModal"><i
+                                    class="bi bi-heart-fill text-primary"></i></button>
+                            <button class="btn deleteBtn"><i class="bi bi-trash-fill text-primary"></i></button>
+                        </td>
+                    </tr>
+                    <tr class="hidden-row hidden">
+                        <td colspan="6">
+                            <ul class="list-unstyled">
+                                <li> ID : 1
+                                </li>
+                                <li> Name : Item 1
+                                </li>
+                                <li> Price :$1
+                                </li>
+                                <li> state : False</li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr class="text-center toggle-row">
+                        <td><button class="btn  toggle-button" >+</button></td>
+                        <td><i class="bi bi-app"></i></td>
+                        <td>2</td>
+                        <td>Item 2</td>
+                        <td>$2</td>
+                        <td><button class="btn" data-bs-toggle="modal" data-bs-target="#exampleModal"><i
+                                    class="bi bi-heart-fill text-primary"></i></button>
+                            <button class="btn deleteBtn"><i class="bi bi-trash-fill text-primary"></i></button>
+                        </td>
+                    </tr>
+                    <tr class="hidden-row hidden">
+                        <td colspan="6">
+                            <ul class="list-unstyled">
+                                <li> ID : 2
+                                </li>
+                                <li> Name : Item 2
+                                </li>
+                                <li> Price :$2
+                                </li>
+                                <li> state : False</li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr class="text-center toggle-row">
+                        <td><button class="btn toggle-button" >+</button></td>
+                        <td><i class="bi bi-app"></i></td>
+                        <td>3</td>
+                        <td>Item 3</td>
+                        <td>$3</td>
+                        <td><button class="btn" data-bs-toggle="modal" data-bs-target="#exampleModal"><i
+                                    class="bi bi-heart-fill text-primary"></i></button>
+                            <button class="btn deleteBtn"><i class="bi bi-trash-fill text-primary"></i></button>
+                        </td>
+                    </tr>
+                    <tr class="hidden-row hidden">
+                        <td colspan="6">
+                            <ul class="list-unstyled">
+                                <li> ID : 3
+                                </li>
+                                <li> Name : Item 3
+                                </li>
+                                <li> Price :$3
+                                </li>
+                                <li> state : False</li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr class="text-center toggle-row" >
+                        <td><button class="btn  toggle-button" >+</button></td>
+                        <td><i class="bi bi-app"></i></td>
+                        <td>4</td>
+                        <td>Item 4</td>
+                        <td>$4</td>
+                        <td><button class="btn" data-bs-toggle="modal" data-bs-target="#exampleModal"><i
+                                    class="bi bi-heart-fill text-primary"></i></button>
+                            <button class="btn deleteBtn"><i class="bi bi-trash-fill text-primary"></i></button>
+                        </td>
+                    </tr>
+                    <tr class="hidden-row hidden">
+                        <td colspan="6">
+                            <ul class="list-unstyled">
+                                <li> ID : 4
+                                </li>
+                                <li> Name : Item 4
+                                </li>
+                                <li> Price :$4
+                                </li>
+                                <li> state : False</li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr class="text-center toggle-row" >
+                        <td><button class="btn  toggle-button" >+</button></td>
+                        <td><i class="bi bi-app"></i></td>
+                        <td>5</td>
+                        <td>Item 5</td>
+                        <td>$5</td>
+                        <td><button class="btn" data-bs-toggle="modal" data-bs-target="#exampleModal"><i
+                                    class="bi bi-heart-fill text-primary"></i></button>
+                            <button class="btn deleteBtn"><i class="bi bi-trash-fill text-primary"></i></button>
+                        </td>
+                    </tr>
+                    <tr class="hidden-row hidden">
+                        <td colspan="6">
+                            <ul class="list-unstyled">
+                                <li> ID : 5
+                                </li>
+                                <li> Name : Item 5
+                                </li>
+                                <li> Price :$5
+                                </li>
+                                <li> state : False</li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr class="text-center toggle-row" >
+                        <td><button class="btn toggle-button" >+</button></td>
+                        <td><i class="bi bi-app"></i></td>
+                        <td>6</td>
+                        <td>Item 6</td>
+                        <td>$6</td>
+                        <td><button class="btn" data-bs-toggle="modal" data-bs-target="#exampleModal"><i
+                                    class="bi bi-heart-fill text-primary"></i></button>
+                            <button class="btn deleteBtn"><i class="bi bi-trash-fill text-primary"></i></button>
+                        </td>
+                    </tr>
+                    <tr class="hidden-row hidden">
+                        <td colspan="6">
+                            <ul class="list-unstyled">
+                                <li> ID : 6
+                                </li>
+                                <li> Name : Item 6
+                                </li>
+                                <li> Price :$6
+                                </li>
+                                <li> state : False</li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr class="text-center toggle-row">
+                        <td><button class="btn toggle-button" >+</button></td>
+                        <td><i class="bi bi-app"></i></td>
+                        <td>7</td>
+                        <td>Item 7</td>
+                        <td>$7</td>
+                        <td><button class="btn" data-bs-toggle="modal" data-bs-target="#exampleModal"><i
+                                    class="bi bi-heart-fill text-primary"></i></button>
+                            <button class="btn deleteBtn"><i class="bi bi-trash-fill text-primary"></i></button>
+                        </td>
+                    </tr>
+                    <tr class="hidden-row hidden">
+                        <td colspan="6">
+                            <ul class="list-unstyled">
+                                <li> ID : 7
+                                </li>
+                                <li> Name : Item 7
+                                </li>
+                                <li> Price :$7
+                                </li>
+                                <li> state : False</li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr class="text-center toggle-row">
+                        <td><button class="btn toggle-button" >+</button></td>
+                        <td><i class="bi bi-app"></i></td>
+                        <td>8</td>
+                        <td>Item 8</td>
+                        <td>$8</td>
+                        <td><button class="btn" data-bs-toggle="modal" data-bs-target="#exampleModal"><i
+                                    class="bi bi-heart-fill text-primary"></i></button>
+                            <button class="btn deleteBtn"><i class="bi bi-trash-fill text-primary"></i></button>
+                        </td>
+                    </tr>
+                    <tr class="hidden-row hidden">
+                        <td colspan="6">
+                            <ul class="list-unstyled">
+                                <li> ID : 8
+                                </li>
+                                <li> Name : Item 8
+                                </li>
+                                <li> Price :$8
+                                </li>
+                                <li> state : False</li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr class="text-center toggle-row">
+                        <td><button class="btn toggle-button">+</button></td>
+                        <td><i class="bi bi-app"></i></td>
+                        <td>9</td>
+                        <td>Item 9</td>
+                        <td>$9</td>
+                        <td><button class="btn" data-bs-toggle="modal" data-bs-target="#exampleModal"><i
+                                    class="bi bi-heart-fill text-primary"></i></button>
+                            <button class="btn deleteBtn"><i class="bi bi-trash-fill text-primary"></i></button>
+                        </td>
+                    </tr>
+                    <tr class="hidden-row hidden">
+                        <td colspan="6">
+                            <ul class="list-unstyled">
+                                <li> ID : 9
+                                </li>
+                                <li> Name : Item 9
+                                </li>
+                                <li> Price :$9
+                                </li>
+                                <li> state : False</li>
+                            </ul>
+                        </td>
+                    </tr>
+                </div>
+            </tbody>
+        </table>
+    </div>
+    <!-- modals -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">
+                        <i class="bi bi-bookmark-heart-fill"></i> My Wish List
+                    </h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    Thank you selecting item and its added to your cart list
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.min.js"
+        integrity="sha384-Rx+T1VzGupg4BHQYs2gCW9It+akI2MM/mndMCy36UVfodzcJcF0GGLxZIzObiEfa"
+        crossorigin="anonymous"></script>
+    <script src="exportjs.js"></script>
+
+</body>
+
+</html>
